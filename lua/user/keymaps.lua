@@ -66,9 +66,17 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
-keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
+keymap(
+	"n",
+	"<leader>ff",
+	":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	opts
+)
+keymap("n", "<c-t>", ":Telescope live_grep<cr>", opts)
+keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
 -- NvimTree
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+
+-- Formatting
+keymap("n", "<leader>F", ":Format<CR>", opts)
