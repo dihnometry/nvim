@@ -72,7 +72,7 @@ keymap(
 	":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
 	opts
 )
-keymap("n", "<c-t>", ":Telescope live_grep<cr>", opts)
+keymap("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
 -- NvimTree
