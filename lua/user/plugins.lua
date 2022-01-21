@@ -51,6 +51,7 @@ return packer.startup(function(use)
     use("nvim-lualine/lualine.nvim")
     use("akinsho/toggleterm.nvim")
     use("norcalli/nvim-colorizer.lua")
+    use "ahmedkhalf/project.nvim"
 
 	-- colorschemes
 	use({
