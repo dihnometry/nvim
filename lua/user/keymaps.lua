@@ -86,3 +86,9 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Formatting
 keymap("n", "<leader>F", ":Format<CR>", opts)
+
+-- Terminals
+keymap("n", "<leader>tl", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<leader>tp", ":lua _PYTHON_TOGGLE()<CR>", opts)
+keymap("n", "<leader>th", ":lua _HTOP_TOGGLE()<CR>", opts)
+keymap("n", "<leader>tn", ":lua _NODE_TOGGLE()<CR>", opts)
