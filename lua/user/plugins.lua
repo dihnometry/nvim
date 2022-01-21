@@ -48,11 +48,12 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
-    use("nvim-lualine/lualine.nvim")
-    use("akinsho/toggleterm.nvim")
-    use("norcalli/nvim-colorizer.lua")
-    use "ahmedkhalf/project.nvim"
-    use "lewis6991/impatient.nvim"
+	use("nvim-lualine/lualine.nvim")
+	use("akinsho/toggleterm.nvim")
+	use("norcalli/nvim-colorizer.lua")
+	use("ahmedkhalf/project.nvim")
+	use("lewis6991/impatient.nvim")
+	use("lukas-reineke/indent-blankline.nvim")
 
 	-- colorschemes
 	use({
