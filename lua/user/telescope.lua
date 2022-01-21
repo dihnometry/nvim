@@ -47,7 +47,7 @@ telescope.setup({
 			},
 
 			n = {
-				["<esc>"] = actions.close,
+				["q"] = actions.close,
 				["<CR>"] = actions.select_default,
 				["<C-x>"] = actions.select_horizontal,
 				["<C-v>"] = actions.select_vertical,
@@ -92,7 +92,7 @@ telescope.setup({
 		media_files = {
 			-- filetypes whitelist
 			-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-			filetypes = { "png", "webp", "jpg", "jpeg" },
+			filetypes = { "png", "webp", "jpg", "jpeg", "bmp" },
 			find_cmd = "rg", -- find command (defaults to `fd`)
 		},
 		-- Your extension configuration goes here:
