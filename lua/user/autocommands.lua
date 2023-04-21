@@ -1,16 +1,14 @@
-vim.cmd([[
-  augroup _html
-    autocmd!
-    autocmd FileType html setlocal shiftwidth=2
-  augroup end
+local web_front = vim.api.nvim_create_augroup("web_front_end", { clear = true })
+local texters = vim.api.nvim_create_augroup("texters", { clear = true })
 
-  augroup _css
-    autocmd!
-    autocmd FileType html setlocal shiftwidth=2
-  augroup end
+vim.api.nvim_create_autocmd("FileType", {
+    command = "setlocal shiftwidth=2",
+    group = web_front,
+    pattern = { "html", "css" }
+})
 
-  augroup _markdown
-    autocmd!
-    autocmd FileType markdown setlocal wrap spell
-  augroup end
-]])
+vim.api.nvim_create_autocmd("FileType", {
+    command = "setlocal wrap spell",
+    group = texters,
+    pattern = { "tex", "latex", "markdown" }
+})
