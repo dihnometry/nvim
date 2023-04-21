@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -24,8 +22,6 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
-
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -57,44 +53,25 @@ keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
--- Terminal --
--- Better terminal navigation
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+keymap("x", "J", ":move '>+1<CR>gv=gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv=gv", opts)
+keymap("x", "<A-j>", ":move '>+1<CR>gv=gv", opts)
+keymap("x", "<A-k>", ":move '<-2<CR>gv=gv", opts)
 
 -- Telescope
 keymap(
 	"n",
 	"<leader>ff",
-	":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	":lua require'telescope.builtin'.fd(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
 	opts
 )
 keymap("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fm", ":Telescope media_files<CR>", opts)
-keymap(
-	"n",
-	"ga",
-	":lua require'telescope.builtin'.lsp_code_actions(require('telescope.themes').get_cursor())<CR>",
-	opts
-)
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Formatting
-keymap("n", "<leader>F", ":Format<CR>", opts)
-
--- Terminals
-keymap("n", "<leader>tl", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
-keymap("n", "<leader>tp", ":lua _PYTHON_TOGGLE()<CR>", opts)
-keymap("n", "<leader>th", ":lua _HTOP_TOGGLE()<CR>", opts)
-keymap("n", "<leader>tn", ":lua _NODE_TOGGLE()<CR>", opts)
+keymap("n", "<leader>F", ":lua vim.lsp.buf.format()<CR>", opts)
