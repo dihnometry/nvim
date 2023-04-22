@@ -64,6 +64,7 @@ return packer.startup(function(use)
 
     -- colorschemes
     use('navarasu/onedark.nvim')
+    use("rebelot/kanagawa.nvim")
 
     use({
         "VonHeikemen/lsp-zero.nvim",
