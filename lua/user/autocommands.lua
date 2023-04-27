@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-    command = "setlocal wrap spell",
+    command = "setlocal wrap spell spelllang=es",
     group = texters,
-    pattern = { "tex", "latex", "markdown" }
+    pattern = { "tex", "latex", "markdown", "plaintex" }
 })
