@@ -45,7 +45,6 @@ return packer.startup(function(use)
     use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
     use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
     use("windwp/nvim-autopairs")
-    use("numToStr/Comment.nvim")
     use("kyazdani42/nvim-web-devicons")
     use {
         'kyazdani42/nvim-tree.lua',
@@ -64,6 +63,7 @@ return packer.startup(function(use)
     -- colorschemes
     use('navarasu/onedark.nvim')
     use("rebelot/kanagawa.nvim")
+    use({ "catppuccin/nvim", as = "catppuccin" })
 
     use({
         "VonHeikemen/lsp-zero.nvim",
@@ -100,7 +100,6 @@ return packer.startup(function(use)
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate",
     })
-    use("JoosepAlviste/nvim-ts-context-commentstring")
 
     -- Git
     use("lewis6991/gitsigns.nvim")
