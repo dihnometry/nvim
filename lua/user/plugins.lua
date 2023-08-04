@@ -64,6 +64,8 @@ return packer.startup(function(use)
     use('navarasu/onedark.nvim')
     use("rebelot/kanagawa.nvim")
     use({ "catppuccin/nvim", as = "catppuccin" })
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use("folke/tokyonight.nvim")
 
     use({
         "VonHeikemen/lsp-zero.nvim",
@@ -88,12 +90,10 @@ return packer.startup(function(use)
         }
     })
 
-
     use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
     -- Telescope
     use("nvim-telescope/telescope.nvim")
-    use("nvim-telescope/telescope-media-files.nvim")
 
     -- TreeSitter
     use({
