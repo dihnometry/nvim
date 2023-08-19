@@ -12,3 +12,8 @@ vim.api.nvim_create_autocmd("FileType", {
     group = texters,
     pattern = { "tex", "latex", "markdown", "plaintex" }
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+    command = "setlocal shiftwidth=2",
+    pattern ={ "ocaml", "ocaml.menhir", "ocaml.interface", "ocaml.ocamllex", "reason", "dune" }
+})

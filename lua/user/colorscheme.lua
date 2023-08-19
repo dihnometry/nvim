@@ -1,10 +1,16 @@
-local colorscheme = "onedark"
+local colorscheme = "rose-pine"
 
-require("onedark").setup({
-    transparent = true,
-    lualine = {
-        transparent = false,
-    }
+-- require("onedark").setup({
+--     transparent = true,
+--     lualine = {
+--         transparent = false,
+--     }
+-- })
+
+require("rose-pine").setup({
+    variant = 'moon',
+    disable_background = true,
+    -- disable_float_background = true,
 })
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

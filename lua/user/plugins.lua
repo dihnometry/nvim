@@ -63,7 +63,6 @@ return packer.startup(function(use)
     -- colorschemes
     use('navarasu/onedark.nvim')
     use("rebelot/kanagawa.nvim")
-    use({ "catppuccin/nvim", as = "catppuccin" })
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     use("folke/tokyonight.nvim")
 
@@ -94,6 +93,7 @@ return packer.startup(function(use)
 
     -- Telescope
     use("nvim-telescope/telescope.nvim")
+    use('nvim-telescope/telescope-ui-select.nvim')
 
     -- TreeSitter
     use({
