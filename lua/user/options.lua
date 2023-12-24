@@ -41,6 +41,7 @@ vim.cmd("set nohlsearch")
 vim.cmd("set incsearch")
 
 vim.opt.shortmess:append("c")
+vim.opt.rtp:append("/home/alejo/.opam/default/share/ocp-indent/vim")
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
