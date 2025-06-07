@@ -20,6 +20,9 @@ map("v", "<A-j>", ":m .+1<CR>==", opts)
 map("v", "<A-k>", ":m .-2<CR>==", opts)
 map("v", "p", '"_dP', opts)
 
+-- This is weird, but ergonomic
+map("n", "<CR>", "ciw", opts)
+
 -- Move text up and down
 map("x", "J", ":move '>+1<CR>gv=gv", opts)
 map("x", "K", ":move '<-2<CR>gv=gv", opts)

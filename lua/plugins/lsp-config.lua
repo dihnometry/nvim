@@ -44,6 +44,8 @@ return {
           map("<leader>rn", vim.lsp.buf.rename, "Rename")
           -- Code action
           map("<leader>ca", vim.lsp.buf.code_action, "Code action", { "n", "x" })
+          -- Open line diagnostic
+          map("<leader>vd", vim.diagnostic.open_float, "View line diagnostics")
         end
       })
       local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -70,6 +72,17 @@ return {
           end
         },
       })
+
+      -- Configure tinymist
+      local status_ok, tiny_config = pcall(require("lspconfig")["tinymist"])
+      if status_ok then
+        tiny_config.setup({
+          settings = {
+            formatterMode = "typstyle",
+            exportPdf = "onSave",
+          }
+        })
+      end
     end,
   },
 }

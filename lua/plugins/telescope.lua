@@ -12,6 +12,7 @@ return {
       map("n", "<leader>fg", builtin.live_grep, { desc = "Telescope grep" })
       map("n", "<leader>fd", builtin.diagnostics, { desc = "Telescope find diagnostics" })
       map("n", "<leader><leader>", builtin.buffers, { desc = "Telescope find existing buffers" })
+      map("n", "<leader>cl", builtin.colorscheme, { desc = "Telescope colorscheme picker" })
     end
   },
   {
