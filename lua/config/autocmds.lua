@@ -5,3 +5,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  desc = "Adjusts the spacing for certain file types",
+  group = vim.api.nvim_create_augroup("four-spacers", { clear = true }),
+  pattern = { "solidity" },
+  command = "set shiftwidth=4"
+})

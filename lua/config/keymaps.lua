@@ -20,8 +20,9 @@ map("v", "<A-j>", ":m .+1<CR>==", opts)
 map("v", "<A-k>", ":m .-2<CR>==", opts)
 map("v", "p", '"_dP', opts)
 
--- This is weird, but ergonomic
-map("n", "<CR>", "ciw", opts)
+-- Buffer navigation
+map("n", "<A-j>", ":bprev<CR>", opts)
+map("n", "<A-k>", ":bnext<CR>", opts)
 
 -- Move text up and down
 map("x", "J", ":move '>+1<CR>gv=gv", opts)
